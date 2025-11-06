@@ -184,6 +184,6 @@ class Boy:
 
 def handle_collision(self, group, other): #이유 상대
     if group == 'boy:ball':
-
+        self.ball_count += 1
 
         pass
