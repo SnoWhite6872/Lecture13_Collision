@@ -24,6 +24,7 @@ def remove_collision_object(o):
             pairs[0].remove(o)
         if o in pairs[1]:
             pairs[1].remove(o)
+
 def remove_object(o):
     for layer in world:
         if o in layer:
@@ -56,7 +57,7 @@ collision_pairs = {}
 
 def add_collision_pair(group, a, b):
     if group not in collision_pairs:
-        collision_pairs[group][0] = [ [], []]
+        collision_pairs[group] = [ [], []]
     if a:
         collision_pairs[group][0].append(a)
     if b:
