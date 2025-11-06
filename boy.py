@@ -140,7 +140,7 @@ class Boy:
 
         self.font = load_font('ENCR10B.TTF', 16)
 
-        self.x, self.y = 400, 90
+        self.x, self.y = 100, 90
         self.frame = 0
         self.face_dir = 1
         self.dir = 0
