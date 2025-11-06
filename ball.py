@@ -29,5 +29,7 @@ class Ball:
         # y 축 속도에 중력 가속도 적용
         self.yv -= GRAVITY * game_framework.frame_time  # m/s
 
+    def get_bb(self):
+        return self.x -10, self.y - 10, self.x +10, self.y +10
 
 
