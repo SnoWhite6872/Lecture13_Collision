@@ -177,3 +177,5 @@ class Boy:
             ball = Ball(self.x+self.face_dir*40, self.y+100, self.face_dir * 15)
             game_world.add_object(ball, 1)
 
+    def get_bb(self):
+        return self.x - 50, self.y - 50, self.x + 50, self.y + 50
