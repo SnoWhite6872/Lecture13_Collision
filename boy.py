@@ -170,7 +170,7 @@ class Boy:
     def draw(self):
         self.state_machine.draw()
         self.font.draw(self.x-10, self.y + 50, f'{self.ball_count:02d}', (255, 255, 0))
-        draw_rectangle(*self.get_bb())
+        draw_rectangle(*self.get_bb()) #튜플을 푸는 방법인 *를 이용하여 튜플 속의 데이터를 각각에 전달 가능
 
     def fire_ball(self):
         if self.ball_count > 0:
@@ -179,4 +179,4 @@ class Boy:
             game_world.add_object(ball, 1)
 
     def get_bb(self):
-        return self.x - 50, self.y - 50, self.x + 50, self.y + 50
+        return self.x - 20, self.y - 40, self.x + 20, self.y + 40
