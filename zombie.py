@@ -52,9 +52,9 @@ class Zombie:
 
     def draw(self):
         if self.dir < 0:
-            Zombie.images['Walk'][int(self.frame)].composite_draw(0, 'h', self.x, self.y, 100*self.count, 100*self.count)
+            Zombie.images['Walk'][int(self.frame)].composite_draw(0, 'h', self.x, self.y  + (47*(self.count - 2)), 100*self.count, 100*self.count)
         else:
-            Zombie.images['Walk'][int(self.frame)].draw(self.x, self.y, 100*self.count, 100*self.count)
+            Zombie.images['Walk'][int(self.frame)].draw(self.x , self.y  + (47*(self.count - 2)), 100*self.count, 100*self.count)
         draw_rectangle(*self.get_bb())
 
     def handle_event(self, event):
