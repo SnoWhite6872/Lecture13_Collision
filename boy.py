@@ -180,3 +180,10 @@ class Boy:
 
     def get_bb(self):
         return self.x - 20, self.y - 40, self.x + 20, self.y + 40
+
+
+def handle_collision(self, group, other): #이유 상대
+    if group == 'boy:ball':
+
+
+        pass

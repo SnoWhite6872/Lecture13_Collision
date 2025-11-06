@@ -43,6 +43,7 @@ def init():
 
 def update():
     game_world.update()
+    game_world.handle_collision()
     #boy, ball간의 충돌을 체크한다.
 
     for ball in balls.copy():

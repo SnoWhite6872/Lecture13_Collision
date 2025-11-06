@@ -55,3 +55,14 @@ def add_collision_pair(group, a, b):
         collision_pairs[group][0].append(a)
     if b:
         collision_pairs[group][1].append(b)
+
+
+def handle_collision():
+    #등록된 모든 충돌 그룹에 대해 충돌 검사 수행
+    for group, pairs in collision_pairs.items():
+        for a in pairs[0]:
+            for b in pairs[1]:
+                if collide(a,b):
+                    a.handle_collision(group, b)
+                    b.handle_collision(group, a)
+    return None
