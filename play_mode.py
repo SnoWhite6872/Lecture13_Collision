@@ -30,6 +30,11 @@ def init():
     boy = Boy()
     game_world.add_object(boy, 1)
 
+    #바닥에 공 배치
+    global balls
+    balls = [Ball(random.randint(200, 1600),60 ,0) for i in range(10)]
+    game_world.add_objects(balls, 1)
+
 
 def update():
     game_world.update()
