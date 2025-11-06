@@ -35,5 +35,5 @@ def clear():
         layer.clear()
 
 
-
-
+def collide(a, b):
+    r
