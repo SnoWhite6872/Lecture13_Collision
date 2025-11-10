@@ -25,6 +25,13 @@ def remove_collision_object(o):
         if o in pairs[1]:
             pairs[1].remove(o)
 
+def remove_collision_object_from_group(group, o):
+    if group in collision_pairs:
+        if o in collision_pairs[group][0]:
+            collision_pairs[group][0].remove(o)
+        if o in collision_pairs[group][1]:
+            collision_pairs[group][1].remove(o)
+
 def remove_object(o):
     for layer in world:
         if o in layer:
@@ -63,6 +70,9 @@ def add_collision_pair(group, a, b):
     if b:
         collision_pairs[group][1].append(b)
 
+def remove_collision_group(group):
+    if group in collision_pairs:
+        del collision_pairs[group]
 
 def handle_collision():
     #등록된 모든 충돌 그룹에 대해 충돌 검사 수행
